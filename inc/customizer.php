@@ -87,8 +87,14 @@ function amsterdam_customizer_head_styles() {
 		body, button, input, select, textarea, .main-navigation ul li a, a:hover, a:focus, a:active, a:visited:hover, a:visited:focus, a:visited:active {
 			color: <?php echo esc_attr( $text_color ); ?>;
 		}
-		a, a:visited, .main-navigation ul li a:hover {
+		a, a:visited, .main-navigation ul li a:hover, input[type="checkbox"]:checked:before, input[type="radio"]:checked:before {
 			color: <?php echo esc_attr( $link_color ); ?>;
+		}
+		input[type="checkbox"]:focus, input[type="radio"]:focus {
+			border-color: <?php echo esc_attr( $link_color ); ?>;
+			-webkit-box-shadow: 0 0 2px rgba(<?php echo esc_attr( amsterdam_hex2rgb( $link_color ) ); ?>, 0.8);
+			-moz-box-shadow: 0 0 2px rgba(<?php echo esc_attr( amsterdam_hex2rgb( $link_color ) ); ?>, 0.8);
+			box-shadow: 0 0 2px rgba(<?php echo esc_attr( amsterdam_hex2rgb( $link_color ) ); ?>, 0.8);
 		}
 		button, input[type="button"], input[type="reset"], input[type="submit"] {
 			background: <?php echo esc_attr( $link_color ); ?>;

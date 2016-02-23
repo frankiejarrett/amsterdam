@@ -14,10 +14,23 @@ body {
 
 blockquote, q {
 	quotes: "" "";
+	margin: 0 0 1.5em;
+	padding: 1em 1.5em;
+	border-left: 5px solid $color__border;
 
 	&:before,
 	&:after {
 		content: "";
+	}
+
+	p {
+		margin: 0 0 1em;
+	}
+
+	footer {
+		display: block;
+		font-size: 85%;
+		color: $color__text-secondary;
 	}
 }
 

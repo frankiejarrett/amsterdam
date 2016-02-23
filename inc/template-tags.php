@@ -119,3 +119,21 @@ function amsterdam_category_transient_flusher() {
 }
 add_action( 'edit_category', 'amsterdam_category_transient_flusher' );
 add_action( 'save_post',     'amsterdam_category_transient_flusher' );
+
+/**
+ * Convert a HEX color to RGB(A)
+ *
+ * @param  string $hex
+ *
+ * @return string
+ */
+function amsterdam_hex2rgb( $hex ) {
+
+	$hex = str_replace( '#', '', $hex );
+	$r   = ( 3 === strlen( $hex ) ) ? hexdec( substr( $hex, 0, 1 ) . substr( $hex, 0, 1 ) ) : hexdec( substr( $hex, 0, 2 ) );
+	$g   = ( 3 === strlen( $hex ) ) ? hexdec( substr( $hex, 1, 1 ) . substr( $hex, 1, 1 ) ) : hexdec( substr( $hex, 2, 2 ) );
+	$b   = ( 3 === strlen( $hex ) ) ? hexdec( substr( $hex, 2, 1 ) . substr( $hex, 2, 1 ) ) : hexdec( substr( $hex, 4, 2 ) );
+
+	return implode( ', ', array( $r, $g, $b ) );
+
+}

@@ -207,7 +207,6 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 
 .header-image-caption h2 {
 	margin: 30px 0;
-	font-family: $font__heading;
 	font-size: 5vw;
 	text-transform: uppercase;
 	letter-spacing: 2px;
@@ -243,14 +242,4 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 .entry-content {
 	font-size: 1.15em;
 	line-height: 1.8em;
-}
-
-.entry-content blockquote {
-	margin-bottom: 1.5em;
-	padding: 1.5em 1.5em 1px;
-	background: $color__border;
-}
-
-.entry-content blockquote p {
-	margin-top: 0;
 }

@@ -1,4 +1,41 @@
 table {
 	margin: 0 0 1.5em;
 	width: 100%;
+
+	th, td {
+		padding: 0.25em;
+		text-align: left;
+	}
+
+	th {
+		font-size: 85%;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+	}
+
+	td {
+		border-bottom: 1px solid $color__border;
+	}
+
+	tr:last-child td {
+		border-bottom: none;
+	}
+
+	thead th {
+		vertical-align: bottom;
+		border-bottom: 2px solid $color__border;
+	}
+
+	tfoot th {
+		vertical-align: top;
+		border-top: 2px solid $color__border;
+	}
+
+	tbody tr:hover td {
+		background: rgba(0, 0, 0, 0.04);
+
+		-webkit-background-clip: padding-box;
+		   -moz-background-clip: padding-box;
+		        background-clip: padding-box;
+	}
 }
