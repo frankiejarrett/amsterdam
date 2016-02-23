@@ -40,6 +40,10 @@ textarea {
 	}
 }
 
+input[type="file"] {
+	line-height: 1;
+}
+
 select {
 	border: 1px solid $color__border;
 }
