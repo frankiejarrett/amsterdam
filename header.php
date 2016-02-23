@@ -51,7 +51,9 @@
 				<h2><?php echo esc_html( get_theme_mod( 'header_title', __( 'Welcome to Amsterdam', 'amsterdam' ) ) ) ?></h2>
 				<p><?php echo esc_html( get_theme_mod( 'header_text', __( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 'amsterdam' ) ) ) ?></p>
 			</div>
-			<div class="header-image"></div>
+			<?php if ( get_header_image() ) : ?>
+				<div class="header-image"></div>
+			<?php endif; ?>
 		</div><!-- .header-image-wrapper -->
 	</header><!-- #masthead -->
 

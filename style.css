@@ -872,6 +872,7 @@ object {
   position: relative;
   clear: both;
   height: 450px;
+  overflow: hidden;
   background: linear-gradient(to bottom left, transparent 0%, black 150%); }
 
 .header-image {
