@@ -72,6 +72,7 @@ input[type="radio"] {
 	}
 
 	&:checked:before {
+		margin-left: 1px;
 		font-size: 1em;
 		text-indent: -9999px;
 		color: $color__link;
@@ -96,7 +97,8 @@ input[type="checkbox"] {
 }
 
 input[type="file"] {
-	line-height: 1;
+    width: 100%;
+    line-height: 1;
 }
 
 select {
