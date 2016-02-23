@@ -1,0 +1,254 @@
+/*!
+Theme Name: Amsterdam
+Theme URI: https://wordpress.org/themes/amsterdam/
+Author: Frankie Jarrett
+Author URI: https://frankiejarrett.com/
+Description: Description
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: amsterdam
+Tags:
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+Amsterdam is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Normalize
+# Typography
+# Elements
+# Forms
+# Navigation
+	## Links
+	## Menus
+# Accessibility
+# Alignments
+# Clearings
+# Widgets
+# Content
+    ## Posts and pages
+	## Asides
+	## Comments
+# Infinite scroll
+# Media
+	## Captions
+	## Galleries
+--------------------------------------------------------------*/
+@import "variables-site/variables-site";
+@import "mixins/mixins-master";
+
+/*--------------------------------------------------------------
+# Normalize
+--------------------------------------------------------------*/
+@import "normalize";
+
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+@import "typography/typography";
+
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+@import "elements/elements";
+
+/*--------------------------------------------------------------
+# Forms
+--------------------------------------------------------------*/
+@import "forms/forms";
+
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+@import "navigation/navigation";
+
+/*--------------------------------------------------------------
+# Accessibility
+--------------------------------------------------------------*/
+@import "modules/accessibility";
+
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+@import "modules/alignments";
+
+/*--------------------------------------------------------------
+# Clearings
+--------------------------------------------------------------*/
+@import "modules/clearings";
+
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+@import "site/secondary/widgets";
+
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+@import "site/site";
+
+/*--------------------------------------------------------------
+# Infinite scroll
+--------------------------------------------------------------*/
+@import "modules/infinite-scroll";
+
+/*--------------------------------------------------------------
+# Media
+--------------------------------------------------------------*/
+@import "media/media";
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+.site-header {
+	text-align: center;
+}
+
+.site-branding {
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+.site-title {
+	font-family: $font__heading;
+	font-weight: 700;
+	font-size: 2.2em;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	margin-bottom: 0.5em;
+}
+
+.site-title a {
+	text-decoration: none;
+}
+
+.main-navigation {
+	height: 60px;
+	overflow: hidden;
+	font-family: $font__heading;
+	font-weight: 700;
+	font-size: 0.85em;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	border-top: 1px solid $color__border;
+	border-bottom: 1px solid $color__border;
+}
+
+.main-navigation > div ul li {
+	float: none;
+	display: inline-block;
+	margin-right: -5px;
+	border-left: 1px solid $color__border;
+}
+
+.main-navigation > div ul li:last-child {
+	border-right: 1px solid $color__border;
+}
+
+.main-navigation ul li a {
+	padding: 18px 15px;
+	color: $color__text-main;
+}
+
+.main-navigation ul li a:hover {
+	color: $color__link;
+}
+
+.main-navigation ul ul li a {
+	text-align: left;
+}
+
+@media screen and (max-width: 599px) {
+
+	.main-navigation > div ul li {
+		display: block;
+	}
+
+}
+
+.header-image-wrapper {
+	position: relative;
+	clear: both;
+	height: 450px;
+	background: linear-gradient(to bottom left, rgba(0, 0, 0, 0) 0%,black 150%);
+}
+
+.header-image {
+	position: relative;
+	display: inline-block;
+	width: 100%;
+	height: 450px;
+	overflow: hidden;
+	background-image: url(eggs.jpg);
+	background-size: cover;
+	background-position: 50%;
+	z-index: -1;
+}
+
+.header-image-caption {
+	position: absolute;
+	height: 50%;
+	margin: auto;
+	top: 0; left: 0; bottom: 0; right: 0;
+	max-width: 900px;
+	color: #fff;
+	text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.25);
+}
+
+.header-image-caption h2 {
+	margin: 30px 0;
+	font-family: $font__heading;
+	font-size: 5vw;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	line-height: 1;
+}
+
+.header-image-caption p {
+	font-size: 1.5em;
+}
+
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+#footer-content {
+	background: #444;
+	color: #eee;
+}
+
+#footer-content a:hover {
+	color: #eee;
+}
+
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+.entry-title {
+	font-size: 2em;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+.entry-content {
+	font-size: 1.15em;
+	line-height: 1.8em;
+}
+
+.entry-content blockquote {
+	margin-bottom: 1.5em;
+	padding: 1.5em 1.5em 1px;
+	background: $color__border;
+}
+
+.entry-content blockquote p {
+	margin-top: 0;
+}

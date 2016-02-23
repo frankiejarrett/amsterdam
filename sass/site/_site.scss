@@ -1,0 +1,34 @@
+.site-content {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.content-area {
+	padding: 2em;
+}
+
+@media screen and (max-width: 959px) {
+
+	.site-content {
+		padding: 0;
+	}
+
+}
+
+@import "../layout/content-sidebar";
+// @import "../layout/sidebar-content";
+
+/*--------------------------------------------------------------
+## Posts and pages
+--------------------------------------------------------------*/
+@import "primary/posts-and-pages";
+
+/*--------------------------------------------------------------
+## Asides
+--------------------------------------------------------------*/
+@import "primary/asides";
+
+/*--------------------------------------------------------------
+## Comments
+--------------------------------------------------------------*/
+@import "primary/comments";

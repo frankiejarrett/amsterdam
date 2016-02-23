@@ -1,0 +1,25 @@
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	padding: 8px 14px;
+	font-family: $font__heading;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	line-height: 27px;
+	border: none;
+	background: $color__link;
+	color: #eee;
+
+	-webkit-transition: background ease-in-out .15s;
+	   -moz-transition: background ease-in-out .15s;
+	    -ms-transition: background ease-in-out .15s;
+	     -o-transition: background ease-in-out .15s;
+	        transition: background ease-in-out .15s;
+
+	&:hover,
+	&:active,
+	&:focus {
+		background: $color__text-main;
+	}
+}

@@ -1,0 +1,27 @@
+body,
+button,
+input,
+select,
+textarea {
+	color: $color__text-main;
+	font-family: $font__main;
+	@include font-size(1);
+	line-height: $font__line-height-body;
+
+	 -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+::-moz-selection {
+	background: $color__link;
+	color: #fff;
+}
+
+::selection {
+	background: $color__link;
+	color: #fff;
+}
+
+@import "headings";
+
+@import "copy";

@@ -1,0 +1,35 @@
+.sticky {
+	display: block;
+}
+
+.hentry {
+	margin: 0 0 2.5em;
+	padding-bottom: 3em;
+	border-bottom: 1px solid $color__border;
+
+	&:last-child {
+		padding-bottom: 0;
+		border-bottom: none;
+	}
+}
+
+.byline,
+.updated:not(.published){
+	display: none;
+}
+
+.single .byline,
+.group-blog .byline {
+	display: inline;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+	margin: 1.5em 0 0;
+}
+
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}

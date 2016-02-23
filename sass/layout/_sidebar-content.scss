@@ -1,0 +1,32 @@
+.content-area {
+	float: right;
+	margin: 0 0 0 (-$size__site-sidebar);
+	width: $size__site-main;
+}
+
+.site-main {
+	margin: 0 0 0 $size__site-sidebar;
+}
+
+.site-content .widget-area {
+	float: left;
+	overflow: hidden;
+	width: $size__site-sidebar;
+}
+
+.site-footer {
+	clear: both;
+	width: $size__site-main;
+}
+
+@media screen and (max-width: 959px) {
+
+	.content-area,
+	.site-main,
+	.site-content .widget-area {
+		float: none;
+		width: $size__site-main;
+		margin: 0;
+	}
+
+}
