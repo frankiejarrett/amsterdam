@@ -201,7 +201,7 @@ input[type="search"]::-webkit-search-decoration {
 fieldset {
   border: 1px solid rgba(0, 0, 0, 0.07);
   margin: 0 2px;
-  padding: 0.35em 0.625em 0.75em; }
+  padding: 0.5em 2em; }
 
 legend {
   border: 0;
@@ -930,25 +930,31 @@ object {
   letter-spacing: 1px;
   border-top: 1px solid rgba(0, 0, 0, 0.07);
   border-bottom: 1px solid rgba(0, 0, 0, 0.07); }
-
-.main-navigation > div ul li {
-  float: none;
-  display: inline-block;
-  margin-right: -5px;
-  border-left: 1px solid rgba(0, 0, 0, 0.07); }
-
-.main-navigation > div ul li:last-child {
-  border-right: 1px solid rgba(0, 0, 0, 0.07); }
-
-.main-navigation ul li a {
-  padding: 18px 15px;
-  color: #333; }
-
-.main-navigation ul li a:hover {
-  color: #c4962d; }
-
-.main-navigation ul ul li a {
-  text-align: left; }
+  .main-navigation.toggled {
+    height: auto; }
+    .main-navigation.toggled .menu-toggle {
+      color: #333; }
+  .main-navigation > div ul li {
+    float: none;
+    display: inline-block;
+    margin-right: -5px;
+    border-left: 1px solid rgba(0, 0, 0, 0.07); }
+    .main-navigation > div ul li:last-child {
+      border-right: 1px solid rgba(0, 0, 0, 0.07); }
+    .main-navigation > div ul li a {
+      padding: 18px 15px;
+      color: #333; }
+      .main-navigation > div ul li a:hover {
+        color: #c4962d; }
+  .main-navigation ul ul li a {
+    text-align: left; }
+  .main-navigation .menu-toggle {
+    height: 60px;
+    background: none;
+    outline: none;
+    color: #c4962d; }
+    .main-navigation .menu-toggle span {
+      font-size: 2em; }
 
 @media screen and (max-width: 599px) {
   .main-navigation > div ul li {

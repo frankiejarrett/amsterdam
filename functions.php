@@ -122,8 +122,9 @@ add_action( 'widgets_init', 'amsterdam_widgets_init' );
  * Enqueue scripts and styles.
  */
 function amsterdam_scripts() {
+	wp_enqueue_style( 'dashicons' );
 	wp_enqueue_style( 'amsterdam-fonts', '//fonts.googleapis.com/css?family=Lato:400,700|Raleway:700' );
-	wp_enqueue_style( 'amsterdam-style', get_stylesheet_uri(), array( 'amsterdam-fonts' ) );
+	wp_enqueue_style( 'amsterdam-style', get_stylesheet_uri(), array( 'dashicons', 'amsterdam-fonts' ) );
 
 	wp_enqueue_script( 'amsterdam-theme', get_template_directory_uri() . '/js/theme.js', array( 'jquery' ), '20151215', true );
 	wp_enqueue_script( 'amsterdam-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );

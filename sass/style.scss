@@ -141,30 +141,49 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	letter-spacing: 1px;
 	border-top: 1px solid $color__border;
 	border-bottom: 1px solid $color__border;
-}
 
-.main-navigation > div ul li {
-	float: none;
-	display: inline-block;
-	margin-right: -5px;
-	border-left: 1px solid $color__border;
-}
+	&.toggled {
+		height: auto;
 
-.main-navigation > div ul li:last-child {
-	border-right: 1px solid $color__border;
-}
+		.menu-toggle {
+			color: $color__text-main;
+		}
+	}
 
-.main-navigation ul li a {
-	padding: 18px 15px;
-	color: $color__text-main;
-}
+	> div ul li {
+		float: none;
+		display: inline-block;
+		margin-right: -5px;
+		border-left: 1px solid $color__border;
 
-.main-navigation ul li a:hover {
-	color: $color__link;
-}
+		&:last-child {
+			border-right: 1px solid $color__border;
+		}
 
-.main-navigation ul ul li a {
-	text-align: left;
+		a {
+			padding: 18px 15px;
+			color: $color__text-main;
+
+			&:hover {
+				color: $color__link;
+			}
+		}
+	}
+
+	ul ul li a {
+		text-align: left;
+	}
+
+	.menu-toggle {
+		height: 60px;
+		background: none;
+		outline: none;
+		color: $color__link;
+
+		span {
+			font-size: 2em;
+		}
+	}
 }
 
 @media screen and (max-width: 599px) {
