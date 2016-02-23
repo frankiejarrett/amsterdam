@@ -164,7 +164,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 			padding: 18px 15px;
 			color: $color__text-main;
 
-			&:hover {
+			&:hover, &:focus {
 				color: $color__link;
 			}
 		}
@@ -261,4 +261,33 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 .entry-content {
 	font-size: 1.15em;
 	line-height: 1.8em;
+}
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+.site-footer {
+	padding: 1.25em 1em 1em;
+	min-height: 3.5em;
+	line-height: 1;
+	text-align: center;
+	background: $color__text-main;
+	color: $color__background-body;
+
+	a {
+		&:hover,
+		&:focus {
+			color: $color__link;
+		}
+	}
+
+	.sep {
+		padding: 0 10px;
+		color: rgba($color__background-body, 0.5);
+
+		span {
+			margin-top: -3px;
+			vertical-align: middle;
+		}
+	}
 }

@@ -944,7 +944,7 @@ object {
     .main-navigation > div ul li a {
       padding: 18px 15px;
       color: #333; }
-      .main-navigation > div ul li a:hover {
+      .main-navigation > div ul li a:hover, .main-navigation > div ul li a:focus {
         color: #c4962d; }
   .main-navigation ul ul li a {
     text-align: left; }
@@ -1021,5 +1021,24 @@ object {
 .entry-content {
   font-size: 1.15em;
   line-height: 1.8em; }
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+.site-footer {
+  padding: 1.25em 1em 1em;
+  min-height: 3.5em;
+  line-height: 1;
+  text-align: center;
+  background: #333;
+  color: #fff; }
+  .site-footer a:hover, .site-footer a:focus {
+    color: #c4962d; }
+  .site-footer .sep {
+    padding: 0 10px;
+    color: rgba(255, 255, 255, 0.5); }
+    .site-footer .sep span {
+      margin-top: -3px;
+      vertical-align: middle; }
 
 /*# sourceMappingURL=style.css.map */

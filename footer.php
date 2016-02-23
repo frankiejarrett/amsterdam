@@ -16,8 +16,8 @@
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
 			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'amsterdam' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'amsterdam' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme by %s.', 'amsterdam' ), '<a href="https://frankiejarrett.com/" rel="designer">Frankie Jarrett</a>' ); ?>
+			<span class="sep"><span class="dashicons dashicons-wordpress-alt"></span></span>
+			<?php printf( esc_html__( 'Theme by %s', 'amsterdam' ), '<a href="https://frankiejarrett.com/" rel="designer">Frankie Jarrett</a>' ); ?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
