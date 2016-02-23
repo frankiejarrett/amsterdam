@@ -20,6 +20,18 @@
 		} );
 	} );
 
+	// Header title and text.
+	wp.customize( 'header_title', function( value ) {
+		value.bind( function( to ) {
+			$( '.header-image-caption h2' ).text( to );
+		} );
+	} );
+	wp.customize( 'header_text', function( value ) {
+		value.bind( function( to ) {
+			$( '.header-image-caption p' ).text( to );
+		} );
+	} );
+
 	// Header text color.
 	wp.customize( 'header_textcolor', function( value ) {
 		value.bind( function( to ) {

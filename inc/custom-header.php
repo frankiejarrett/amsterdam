@@ -23,12 +23,13 @@
 function amsterdam_custom_header_setup() {
 
 	add_theme_support( 'custom-header', apply_filters( 'amsterdam_custom_header_args', array(
-		'default-image'      => get_template_directory_uri() . '/navigator.jpg',
+		'default-image'      => get_template_directory_uri() . '/eggs.jpg',
 		'default-text-color' => 'ffffff',
 		'header-text'        => true,
 		'width'              => 1280,
 		'height'             => 450,
 		'flex-width'         => true,
+		'flex-height'        => true,
 		'wp-head-callback'   => 'amsterdam_header_style',
 	) ) );
 

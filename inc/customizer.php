@@ -36,6 +36,34 @@ function amsterdam_customize_register( $wp_customize ) {
 		'settings' => 'text_color',
 	) ) );
 
+	$wp_customize->add_setting( 'header_title', array(
+		'default'           => __( 'Welcome to Amsterdam', 'amsterdam' ),
+		'sanitize_callback' => 'sanitize_text_field',
+		'capability'        => 'edit_theme_options',
+		'transport'         => 'postMessage',
+	) );
+
+	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'header_title', array(
+		'label'    => __( 'Header Title', 'amsterdam' ),
+		'section'  => 'header_image',
+		'priority' => 0,
+		'settings' => 'header_title',
+	) ) );
+
+	$wp_customize->add_setting( 'header_text', array(
+		'default'           => __( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 'amsterdam' ),
+		'sanitize_callback' => 'sanitize_text_field',
+		'capability'        => 'edit_theme_options',
+		'transport'         => 'postMessage',
+	) );
+
+	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'header_text', array(
+		'label'    => __( 'Header Text', 'amsterdam' ),
+		'section'  => 'header_image',
+		'priority' => 0,
+		'settings' => 'header_text',
+	) ) );
+
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';

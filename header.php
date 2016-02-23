@@ -48,8 +48,8 @@
 
 		<div class="header-image-wrapper">
 			<div class="header-image-caption">
-				<h2>Welcome to Amsterdam</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+				<h2><?php echo esc_html( get_theme_mod( 'header_title', __( 'Welcome to Amsterdam', 'amsterdam' ) ) ) ?></h2>
+				<p><?php echo esc_html( get_theme_mod( 'header_text', __( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 'amsterdam' ) ) ) ?></p>
 			</div>
 			<div class="header-image"></div>
 		</div><!-- .header-image-wrapper -->

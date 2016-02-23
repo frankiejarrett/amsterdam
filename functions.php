@@ -81,6 +81,8 @@ function amsterdam_setup() {
 	add_theme_support( 'customize-inline-editing', array(
 		'blogname'        => '.site-title a',
 		'blogdescription' => '.site-description',
+		'header_title'    => '.header-image-caption h2',
+		'header_text'     => '.header-image-caption p',
 	) );
 }
 endif;
