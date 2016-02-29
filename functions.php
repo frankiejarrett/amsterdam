@@ -77,6 +77,10 @@ function amsterdam_setup() {
 		'default-image' => '',
 	) ) );
 
+	// Allow custom logos in the Customizer.
+	add_image_size( 'amsterdam-logo', 600, 200 );
+	add_theme_support( 'site-logo', array( 'size' => 'amsterdam-logo' ) );
+
 	// Fancy inline editing in the Customizer.
 	add_theme_support( 'customize-inline-editing', array(
 		'blogname'        => '.site-title a',
@@ -136,6 +140,29 @@ function amsterdam_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'amsterdam_scripts' );
+
+/**
+ * Add custom image sizes attribute to enhance responsive image functionality
+ * for site logo.
+ *
+ * @param  array $attr       Attributes for the image markup.
+ * @param  int   $attachment Image attachment ID.
+ * @param  array $size       Registered image size or flat array of height and width dimensions.
+ *
+ * @return string A source size value for use in a post thumbnail 'sizes' attribute.
+ */
+function amsterdam_logo_sizes_attr( $attr, $attachment, $size ) {
+
+	if ( 'amsterdam-logo' === $size ) {
+
+		$attr['sizes'] = '(max-width: 709px) 85vw, (max-width: 909px) 81vw, (max-width: 1362px) 88vw, 1200px';
+
+	}
+
+	return $attr;
+
+}
+add_filter( 'wp_get_attachment_image_attributes', 'amsterdam_logo_sizes_attr', 10, 3 );
 
 /**
  * Implement the Custom Header feature.

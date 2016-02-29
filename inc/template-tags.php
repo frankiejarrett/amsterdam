@@ -137,3 +137,20 @@ function amsterdam_hex2rgb( $hex ) {
 	return implode( ', ', array( $r, $g, $b ) );
 
 }
+
+if ( ! function_exists( 'amsterdam_the_site_logo' ) ) {
+
+	/**
+	 * Displays the optional site logo.
+	 */
+	function amsterdam_the_site_logo() {
+
+		if ( function_exists( 'the_site_logo' ) ) {
+
+			the_site_logo();
+
+		}
+
+	}
+
+}
