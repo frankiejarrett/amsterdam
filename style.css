@@ -251,6 +251,7 @@ textarea {
 h1, h2, h3, h4, h5, h6, legend, table th {
   font-family: Raleway, sans-serif;
   font-weight: 700;
+  line-height: 1.25;
   clear: both; }
   h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, legend a, table th a {
     text-decoration: none; }
